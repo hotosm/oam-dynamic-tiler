@@ -130,6 +130,7 @@ RUN \
     flask/helpers.pyc \
     flask/__init__.pyc \
     flask/json.pyc \
+    flask/logging.pyc \
     flask/sessions.pyc \
     flask/signals.pyc \
     flask/templating.pyc \
@@ -301,7 +302,7 @@ RUN \
     requests/__init__.pyc \
     requests/_internal_utils.pyc \
     requests/models.pyc \
-    requests/packages/chardet/__init__.pyc \
+    requests/packages/chardet/* \
     requests/packages/idna/core.pyc \
     requests/packages/idna/idnadata.pyc \
     requests/packages/idna/__init__.pyc \
