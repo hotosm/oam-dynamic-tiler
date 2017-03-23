@@ -2,6 +2,7 @@
 
 import os
 import logging
+import unicodedata
 
 import arrow
 from cachetools.func import rr_cache
@@ -79,10 +80,10 @@ def tile(id, z, x, y, **kwargs):
         headers['X-VE-TILEMETA-CaptureDatesRange'] = capture_range
 
     if meta['meta'].get('provider'):
-        headers['X-OIN-Provider'] = meta['meta'].get('provider')
+        headers['X-OIN-Provider'] = unicodedata.normalize('NFKD', meta['meta'].get('provider')).encode('ascii', 'ignore')
 
     if meta['meta'].get('platform'):
-        headers['X-OIN-Platform'] = meta['meta'].get('platform')
+        headers['X-OIN-Platform'] = unicodedata.normalize('NFKD', meta['meta'].get('platform')).encode('ascii', 'ignore')
 
     return tile, 200, headers
 
