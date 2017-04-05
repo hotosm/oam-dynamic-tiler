@@ -18,12 +18,6 @@ bin/transcode.sh \
   57fca69e84ae75bb00ec751f.tif
 ```
 
-Add external overviews:
-
-```bash
-bin/make_overviews.sh 57fca69e84ae75bb00ec751f.tif
-```
-
 Write back to S3:
 
 ```bash
