@@ -3,7 +3,8 @@ FROM lambci/lambda:build-python2.7
 # Install deps
 
 RUN \
-  yum install -y \
+  touch /var/lib/rpm/* \
+  && yum install -y \
     automake16 \
     libcurl-devel \
     libpng-devel
