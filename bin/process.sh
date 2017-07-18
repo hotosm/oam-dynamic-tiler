@@ -6,9 +6,14 @@ shift $[$#-2]
 
 input=$1
 output=$2
-# target size in KB
-THUMBNAIL_SIZE=${THUMBNAIL_SIZE:-300}
+
+THUMBNAIL_SIZE=${THUMBNAIL_SIZE:-300} # target size in KB
 TILER_BASE_URL=${TILER_BASE_URL:-http://tiles.openaerialmap.org}
+
+# Although TMPDIR is usually set by the OS, it doesn't seem to be getting passed through
+# Docker and Node's `spawn()`, so no harm done in just defaulting to `/tmp` in such cases.
+# There may be clues here as the underlying issue: https://github.com/npm/npm/issues/4531
+TMPDIR={TMPDIR:-/tmp}
 
 set -euo pipefail
 
