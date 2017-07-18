@@ -1,3 +1,4 @@
+# See https://github.com/mojodna/docker-gdal22
 FROM quay.io/mojodna/gdal22
 MAINTAINER Seth Fitzsimmons <seth@mojodna.net>
 
