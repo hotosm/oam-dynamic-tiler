@@ -5,7 +5,7 @@ flask
 flask-cors
 mercantile
 numpy
-Pillow
+Pillow = 4.1.1
 rasterio>=1.0a6
 raven
 requests

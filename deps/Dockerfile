@@ -57,7 +57,7 @@ RUN \
 ENV PATH /tmp/virtualenv/bin:/var/task/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN \
-  pip install -U arrow cachetools Cython flask flask_cors jinja2 mercantile numpy pillow raven requests urllib3 werkzeug && \
+  pip install -U arrow cachetools Cython flask flask_cors jinja2 mercantile numpy "pillow == 4.1.1" raven requests urllib3 werkzeug && \
   pip install -U --no-binary :all: rasterio>=1.0a6 && \
   pip install -U rio-color
 
