@@ -19,7 +19,7 @@ PREFERRED_URL_SCHEME = os.environ.get('PREFERRED_URL_SCHEME', 'http')
 SERVER_NAME = os.environ.get('SERVER_NAME', 'localhost:8000')
 
 app = Flask('oam-tiler')
-CORS(app)
+CORS(app, send_wildcard=True)
 app.config['APPLICATION_ROOT'] = APPLICATION_ROOT
 app.config['PREFERRED_URL_SCHEME'] = PREFERRED_URL_SCHEME
 app.config['SERVER_NAME'] = SERVER_NAME
