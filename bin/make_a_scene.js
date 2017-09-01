@@ -20,7 +20,7 @@ const scene = {
 }
 
 // TODO path prefix as a command line arg
-async.each(process.argv.slice(2), (filename, done) => {
+async.eachLimit(process.argv.slice(2), 5, (filename, done) => {
   request({
     json: true,
     uri: filename
