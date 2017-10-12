@@ -1,5 +1,9 @@
 # OpenAerialMap Dynamic Tiler
 
+> **NOTE**: Development on this has ceased in favor of [marblecutter](https://github.com/mojodna/marblecutter), which is an evolution of this codebase. [marblecutter-openaerialmap](https://github.com/mojodna/marblecutter-openaerialmap) is the functional equivalent to this repo.
+
+---
+
 This is a standalone (Python / Flask) and Lambda-based dynamic tiler for S3-hosted GeoTIFFs.
 
 More information:
